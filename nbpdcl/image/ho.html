@@ -1,0 +1,448 @@
+<!doctype>
+<html>
+<head>
+<style>
+body{
+margin:0px;
+border:0px;
+padding-top: 0px;
+background-size:cover;
+}
+header,footer{
+padding: 0.5em;
+color:white;
+background-color: black;
+clear: left;
+text-align: center;
+}
+#navbar2{
+width:100%;
+height:20px;
+background-color: ##2B547E;
+color:white;
+line-height:10px;
+position:absolute;
+top:0;
+}
+
+#navbar{
+width:100%;
+height:80px;
+background-color: #0009;
+color:white;
+line-height:10px;
+position: fixed;
+top:0;
+}
+#navbar1{
+width:100%;
+height:350px;
+background:url('w7.jpg');
+color:white;
+line-height:10px;
+top:10px;
+background-size:cover;
+padding:50px;
+}
+#nav{
+width:100%;
+height:100px;
+background-color: #0001;
+color:white;
+line-height:0px;
+top:0;
+}
+#linkref{
+color:white;
+text-decoration:none;
+padding:0px;
+}
+ul{
+list-style:none;
+padding:0px;
+margin:0;
+position:absolute;
+}
+
+ ul li{
+background-color:;
+float:left;
+padding:0px;
+margin-top:0px;
+}
+ul li active{
+background-color:;
+float:left;
+padding:10px;
+margin-top:0px;
+}
+
+ a {
+width:100px;
+display:block;
+text-decoration:none;
+font-size:20px;
+text-align:center;
+padding:0px;
+top:20px;
+font-family: Century Gothic;
+font-weight:bold;
+  color: #C0C0C0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+ display: inline; 
+}
+a:hover, a:active, a:focus {
+  color: #17B794;
+  outline: none;
+  text-decoration: none;
+}
+ul li a:hover, ul li a:focus, ul li a:active {
+  color: white;
+}
+ 
+ ul li.active > a {
+  color: #fff !important;
+}
+</style>
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin:auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/5 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot active {
+  background-color:#717171 ;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+article{
+ 
+ display: block;
+margin-left: 500px;
+border-left: px solid grey;
+padding: 1em;
+overflow: hidden;
+}
+</style>
+
+<body><img src="w5.jpg" style=" position: fixed; width:1350px; height:80px;">
+<br><br><br><br><br><br>
+<div class="slideshow-container">
+
+<div class="mySlides fade"style="align:center">
+  <div class="numbertext">1 / 5</div>
+  <img src="c1.jpg" style="width:1000px; " height="400">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade"style="align:center">
+  <div class="numbertext">2 / 5</div>
+  <img src="c2.jpg" style="width:1000px; " height="400">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade"style="align:center">
+  <div class="numbertext">3 / 5</div>
+  <img src="w.jpg" style="width:1000px; " height="400">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade"style="align:center">
+  <div class="numbertext">4/ 5</div>
+  <img src="w1.jpg" style="width:1000px; " height="400">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade"style="align:center">
+  <div class="numbertext">5 /5 </div>
+  <img src="w2.jpg" style="width:1000px;"   height="400">
+  <div class="text"></div>
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>  
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 6000); // Change image every 6 seconds
+}
+</script>
+<style>
+<style type="text/css" media="screen">
+  
+#navbar li { float:left; position:relative; padding-right:100; display:block;
+ border:4px solid #CC55FF; border-style:inset; } 
+#navbar li ul { display:none; position:absolute;margin:10; }
+ #navbar li:hover ul{ display:block;background:#2B547E; height:15em; width:18em; } 
+
+</style>
+
+</head>
+<body>
+
+
+<div id="navbar">
+<ul>
+<li><img src="csw.jpg"style="width:80px; height:80px; float:left; border-radius:50%"></li>
+<li>
+<h1 style="font-family:algerian" ><br> CYBER SECURE WORLD</h1></li>
+
+
+<li class="active" style=" padding:20;"><a href="ho.html">Home</a></li>
+						<li style=" padding:20;"><a href="a.html">About us</a></li>
+						<li style=" padding:20;"><a href="gal.html">Gallery</a></li>
+						<li style=" padding:20;">
+						<a href="cc.html">Cyber Crime</a></li>
+							
+								
+							     <li style=" padding:20;"><a href="c.html">Classification</a>
+								 <ul>
+								 <li style=" padding:10;"><a href="disse1.html"> Virus Dissimination</a></li>
+								 <li style=" padding:10;"><a href="cyber stalking.html"> Web Jacking</a></li>
+								 <li style=" padding:10;"><a href="denial of service attack.html"> Denial of service attack</a></li>
+		                         <li style=" padding:10;"><a href="phish.html"> Phishing.........</a></li>
+								 <li style=" padding:10;"><a href="hacking new1.html"> Hacking..........</a></li>
+								 <li style=" padding:10;"><a href="software piracy 1.html"> Software Piracy</a></li>
+								 <li style=" padding:10;"><a href="bomb.html"> E-mail bombing & spammer</a></li>
+								 </ul></li>
+						 
+						
+						 
+						<li  style=" padding:20;"><a href="gal1.html" >Login</a></li>
+						<li style=" padding:20;"><a href="fd1.html" >Feedback</a></li>
+ </ul>
+</div>
+</center><header>
+<marquee  bgcolor="#2B547E" behavior="alternate">
+
+<font color=" white"><h2>Professional discretion security for a changing world.</h2></marquee></header>
+
+<img src="g1.gif" style="float:left;width:402px; height:250px; padding:30;"><br>
+
+
+<article>
+
+<h2 style="font-family:algerian;" align="justify" ><ins>CYBER SECURE WORLD</ins></h2><h5>
+CSW is an intelligent-driven and threat-focused national security organization
+with<br> both intelligence and law enforcement responsibilities that is staffed by
+ a dedicated<br>cadre agents, analysts, and other professionals who work around
+ the clock and across<br>the globle to protect the world from terrorism, espionage, 
+ cyber attacks,and major<br> criminal threats, and to provide its many partners with
+ services, support, training, and leadership.<h5></article>
+ <br><center><font color="white"><h1 style="font-family:algerian;font-size:40px;background-color:#2B547E;"> One of our main enemy is CYBER CRIME</h1></center> <br></div>
+ 
+ <a href="cc.html"><img src="cc.jpg" style=" float:left; width:472px; height:500px;padding:40px;"></a>
+ <article><font color="black">
+ <h1 style="font-family:algerian;" align="justify" ><ins>CYBER CRIME</ins></h1><font color="black"><h5>
+Cyber crime, or computer oriented crime, is crime that involves a computer and a network.<br>
+ The computer may have been used in the commission of a crime, or it may be the target.<br>
+ Cybercrimes can be defined as: "Offences that are committed against individuals or groups <br>of 
+ individuals with a criminal motive to intentionally harm the reputation of the victim or<br> cause
+ physical or mental harm, or loss, to the victim directly or indirectly, using modern <br>telecommunication
+ networks such as Internet (networks including but not limited<br> to Chat rooms, emails, notice boards and groups)
+ and mobile phones (Bluetooth/SMS/MMS)".<br> Cybercrime may threaten a person or a nation's securityand 
+ financial health.<br> Issues surrounding these types of crimes have become high-profile, particularly
+ those surrounding<br> hacking, copyright infringement, unwarranted mass-surveillance, child pornography,
+ and child grooming.<br> There are also problems of privacy when confidential information is intercepted or
+ disclosed,<br> lawfully or otherwise.<br> Debarati Halder and K. Jaishankar further define cybercrime from the
+ perspective of gender<br> and defined 'cybercrime against women' as "Crimes targeted against women with a
+ motive<br> to intentionally harm the victim psychologically and physically, using modern telecommunication 
+ <br>networks such as internet and mobile phones". <br>Internationally, both governmental and non-state actors 
+ engage in cybercrimes, including<br> espionage, financial theft, and other cross-border crimes.
+ Activity crossing international borders<br> and involving the interests of at least one nation state is 
+ sometimes referred to as cyberwarfare.<br>
+
+A report (sponsored by McAfee) estimates that the annual damage to the global economy is<br> at $445 billion;
+ however, a Microsoft report shows that such survey-based estimates are <br>"hopelessly flawed" and exaggerate
+ the true losses by orders of magnitude.<br>[third-party source needed] Approximately $1.5 billion was lost
+ in 2012 to online credit and<br> debit card fraud in the US.<br> In 2016, a study by Juniper Research estimated 
+ that the costs of cybercrime could be as high<br> as 2.1 trillion by 2019.</article>
+ 
+ <br> <center><font color="white"><h1 style="font-family:algerian;font-size:40px;background-color:#2B547E;"> CYBER LAWS</h1> </center><br>
+ <a href="#"><img src="sl.jpg" style=" float:left; width:472px; height:400px;padding:30px;"></a>
+<article><font color="black">
+ <h1 style="font-family:algerian;" align="justify" ><ins>CYBER LAWS</ins></h1><font color="black"><h5>
+In Simple way we can say that cyber crime is unlawful acts wherein the computer <br>
+is either a tool or a target or both.<br> Cyber crimes can involve criminal activities
+ that are traditional in nature, such as<br>
+ theft, fraud, forgery, defamation and mischief, all of which are subject to the Indian<br>
+ Penal Code.<br>
+ The abuse of computers has also given birth to a gamut of new age crimes that are<br> 
+ addressed by the Information Technology Act, 2000.<br>
+We can categorize Cyber crimes in two ways
+The Computer as a Target :-<br>using a computer to attack other computers.
+e.g. Hacking,Virus/Worm attacks,DOS <br>attack etc.<br>
+The computer as a weapon :-using a computer to commit real world crimes.
+<br>e.g. Cyber Terrorism, IPR violations,Credit card frauds,EFT frauds, Pornography etc.<br>
+Cyber law (also referred to as cyberlaw) is a term used to describe the legal issues<br>
+ related to use of communications technology, particularly
+ cyberspace", i.e. the Internet.<br> It is less a 
+ distinct field of law in the way that property or contract are as it is an <br>
+ intersection of many legal fields, including intellectual property,
+ privacy,<br> freedom of expression, and jurisdiction.<br>
+ In essence, cyber law is an attempt to integrate the challenges presented by 
+ human activity<br> on the Internet with legacy system of laws applicable to the physical world.</article>
+ 
+<font color="white">
+<h1 style="font-family:algerian;background-color:#2B547E; " align="center">MOST WANTED CRIMINALS</h1>
+<style>
+.loginform{  
+    padding:10px;  
+    border:1px solid black;  
+    border-radius:10px;  
+    width:350px;
+    margin-top:10px; 
+background-color:ffcd94;	
+}  
+.formheading{  
+    background-color:red;  
+    color:white;  
+    padding:4px;  
+    text-align:center;  
+} 
+</style>
+<script src ="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+$("#flip").click(function(){
+$("#panel").slideToggle("slow");
+
+});
+});
+</script>
+<style>
+#panel,#flip{
+ padding:5px;
+ text-align:center;
+ background-color: #e5eecc;
+border:solid 1px #c3c3c3; 
+}
+#panel{
+ padding: 50px;
+ display: none;
+}
+</style>
+</head>
+<div class="loginform" style="float:left"> 
+<h3 class="formheading">Most wanted: Case of the week</h3>  
+<img src="mw.jpg" style=" width:325px; height:200px;border-radius:50%;" >
+<font color="black">
+<div id="flip"><H3>RUSSELL ALLEN LYLES,JR.</H3> </div>
+<div id="panel" >Russell Allen Lyles, Jr., who was indicted by a federal grand jury
+ on October 10, 2017, on charges of Racketeer Influenced and Corrupt Organizations (RICO)
+ Conspiracy, Maiming in Aid of Racketeering, and Assault with a Dangerous Weapon in Aid of Racketeering. 
+ A federal arrest warrant for Lyles, Jr. was issued in the United States District Court, Northern District
+ of California, San Francisco, California, on November 13, 2017, and the charges were unsealed on November 20, 2017</div>
+</div><article>
+<a href="wr.jpg" target="blank"><img src="mw1.jpg" style=" width:250px; height:200px;border-radius:25px;" ></a>
+<a href="we.jpg" target="blank"><img src="mw2.jpg" style=" width:250px; height:200px;border-radius:25px;" ></a>
+<a href="qw.jpg" target="blank"><img src="mw3.jpg" style=" width:250px; height:200px;border-radius:25px;" ></a><br><br><br>
+<a href="aq.jpg" target="blank"><img src="mw4.jpg" style=" width:250px; height:200px;border-radius:25px;" ></a>
+<a href="as.jpg" target="blank"><img src="mw5.jpg" style=" width:250px; height:200px;border-radius:25px;" ></a>
+<a href="zx.jpg" target="blank"><img src="m6.jpg" style=" width:250px; height:200px;border-radius:25px;" ></a></article><br><br><br><br>
+<div id="navbar1"><table style="width:100%">
+<tr>
+<td><img src="cu.jpg" style=" width:300px; height:225px;" ></td>
+<td style="padding:20;"><img src="24.jpg" style=" width:250px; height:250px;border-radius:50%;" ></td>
+<td><div class="module   span_4 col clr" style="float:right;">
+	    	<h3 class="module-title"><font color="white">Location</h3>
+        <div class="module-body">
+    	
+
+<div class="custom"  >
+	<iframe width="295" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+	src="https://maps.google.co.in/maps?q=patna+womens+college&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;ll=25.611628,85.124868&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A&amp;output=embed">
+	</iframe><br /><small>
+	<a href="https://maps.google.co.in/maps?q=patna+womens+college&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;ll=25.611628,85.124868&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A&amp;source=embed" 
+	style="color:#0000FF;text-align:left"></a></small></div></td></table>
+    </div>
+	</div>
+
+</div><footer>copyright &copy;sonaliranjan21@gmail.com 
+</footer>
+</body>
+</html>
